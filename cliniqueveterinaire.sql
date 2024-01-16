@@ -42,3 +42,15 @@ CREATE TABLE VisitesVet (
     FOREIGN KEY (Animal_ID) REFERENCES Animaux(ID) ON DELETE CASCADE,
     FOREIGN KEY (Veterinaire_ID) REFERENCES Veterinaires(ID) ON DELETE CASCADE
 );
+
+-- Ajouter un nouvel animal
+INSERT INTO Animaux (Nom, Espece, Age, Sexe, Proprietaire_ID) VALUES ('Fido', 'Chien', 3, 'M', 1);
+
+-- Ajouter un nouveau propriétaire
+INSERT INTO Proprietaires (Nom, Adresse, Contact) VALUES ('Alice', '123 Rue des Animaux', '555-1234');
+
+-- Ajouter un nouveau vétérinaire
+INSERT INTO Veterinaires (Nom, Specialite, Contact) VALUES ('Dr. Smith', 'Chirurgie', '555-5678');
+
+-- Ajouter une nouvelle visite vétérinaire
+INSERT INTO VisitesVet (Animal_ID, Veterinaire_ID, Date, Raison, Traitement) VALUES (1, 1, '2024-01-20', 'Examen annuel', 'Aucun traitement nécessaire');
